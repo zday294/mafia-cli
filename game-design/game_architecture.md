@@ -3,56 +3,70 @@
 
 ## Model
 
-### Classes
+### Model Classes
 
-#### Player
+### Player
 
-##### Properties
+Properties
+Name | Type | Description
+---|---|---
+Alive | bool | Whether a player is alive or dead
+ID | int | Player's id number
+Role | int | A player's role. 0 for townsfolk, 1 for mafia, 2 for doctor, 3 for sherrif
+Name | string | Player's name
+HasVoted | bool | Player has voted in the most recent trial
 
-Alive - boolean value representing whether a player is alive or dead
-ID - integer value representing a player's id number
-Name - string value representing a player's name
+Methods
+Name | Return Type | Parameters | Description
+---|---|---|---
+Accuse | bool | int player_id | Accuse the player represented by player_id. Returns true if player_id is a valid player
+Vote | void | bool should_execute | Vote whether to execute the player currently on trial
 
-##### Methods
+### Mafia: Player
 
-bool Accuse(int player_id) - accuse the player represented by player_id. Returns true if player_id is a valid player
-void Vote(bool should_execute) - vote whether to execute the player currently on trial
+Methods
+Name | Return Type | Parameters | Description
+---|---|---|---
+Kill | bool | int player_id | Vote on which player should be killed. Returns true if player_id is a valid player
 
-#### Mafia: Player
-
-##### Methods
-
-bool Kill(int player_id) - vote on which player should be killed. returns true if player_id is a valid player
-
-#### Townsfolk: Player
+### Townsfolk: Player
 
 No additional properties or methods
 
-#### Doctor: Townsfolk
+### Doctor: Townsfolk
 
-##### Methods
+Methods
 
-bool Save(int player_id) - choose a player to save. returns true if player_id is a valid player
+Name | Return Type | Parameters | Description
+---|---|---|---
+Save | bool | int player_id | Choose a player to save. returns true if player_id is a valid player
 
-#### Sherrif: Townsfolk
+### Sherrif: Townsfolk
 
-#### Methods
+Methods
+Name | Return Type | Parameters | Description
+---|---|---|---
+Investigate| int | int player_id | Choose a player to investigate. Returns 1 if mafia, 0 if townsfolk, and -1 if invalid player
 
-int Investigate(int player_id) - choose a player to investigate. Returns 1 if mafia, 0 if townsfolk, and -1 if invalid player
+### Game
 
-#### Game
-
-##### Properties
-
-Vector<<n>Player> Players - vector of players representing all the players in the game
-
-int Phase - current phase of the game. 0 = day, 1 = night
-
-
+Properties
+Name | Type | Description
+---|---|---
+Players | Vector<<n>Player> | Vector of players representing all the players in the game
+Phase | int | Current phase of the game. 0 = day, 1 = night
+Accusations | Vector<<e>int> | Current number of accusations on each player
+Votes | int | Number of votes submitted in most recent trial
 
 ## View
 
-### Classes
+### View Classes
 
-#### Client
+### Client
 
+This part needs research. I dont know how c++ does networking, but I have some idea of what I need.
+
+Properties
+Name | Type | Description
+---|---|---
+MyPlayer | Player | contains player information

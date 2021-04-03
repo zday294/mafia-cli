@@ -37,7 +37,7 @@ message "Players in lobby"
 message "<player_name>"
 ```
 
-with one message with a player_name per player in the lobby (including the current player). 
+with one message with a player_name per player in the lobby (including the current player).
 
 All players presently in the lobby also recieve a message when a player has joined.
 
@@ -93,7 +93,7 @@ Most player actions will be sent by the client using the following format
 action <action_id> <role_id> <client_id> <player_id>
 ```
 
-The actions available to players depend on the role. 
+The actions available to players depend on the role.
 
 The server will give a response in the following format
 
