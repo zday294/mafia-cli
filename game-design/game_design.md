@@ -1,3 +1,5 @@
+# Game design
+
 In the town of Definitely-Not-Salem, the people live peacably. Little do they know that the local mafia is tired of the people not paying their dues to live there. It's too late to pay now, and the mafia has decided to start killing off the townspeople, one by one each night. Assuming they can come to a majority decision on that night. 
 
 However, the mafia has to look out. The town of Definitely-Not-Salem has an odd justice system. Due to the presence of the mafia, emergency trials are being held each day. By the grand power of democracy, someone may be put up as the defendant for murder. If convicted, he shall be executed immediately and without remorse. If all the mafia are sentenced to death, well then they're certainly not going to collect their dues. 
@@ -5,7 +7,6 @@ However, the mafia has to look out. The town of Definitely-Not-Salem has an odd 
 The townspeople are also not without defense. The doctor, having a keen intuition that someone might be murdered each night, can choose one of his fellow townsfolk to be saved. The sherrif, also keenly aware of malicious criminal undertaking, can investigate one person each night and determine if they are involved with this killing spree.
 
 Will you survive? Will you murder your fellow townsfolk? Will you follow the spirit of the law or obey its letter as an agent of chaos. The decision is up to you.
-
 
 Basic Game Structure
 I. Setup
@@ -26,7 +27,7 @@ II. Night phase
         1. Townsfolk might get an inspirational quote
         2. Otherwise, they're just getting a countdown to day time
     e. Dead
-        1. Dead can chat among themselves. 
+        1. Dead can chat among themselves.
         2. Dead cannot see player roles
         2. Dead can see who was picked by each role
 III. Day phase
@@ -42,4 +43,4 @@ III. Day phase
         3. Dead players messages cannot be seen by living players
 IV. Winning
     a. The game ends when either mafia or townsfolk are the only group with living players
-    b. The game goes to the group with living players. 
+    b. The game goes to the group with living players.

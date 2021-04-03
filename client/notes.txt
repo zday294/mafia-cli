@@ -1,0 +1,7 @@
+The cli client will be written in C++. This allows for the use of classes to manage actions.
+
+Most of the game will be handled by the server. The client exists mostly to connect to the server and handle command processing. Any invalid commands will be handled by the client so that invalid commands are not sent to the server.
+
+Client side software architecture is available in the game-design/game_architecture file
+
+Future implementations may be designed in different languages

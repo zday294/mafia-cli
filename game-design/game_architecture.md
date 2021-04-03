@@ -44,4 +44,15 @@ int Investigate(int player_id) - choose a player to investigate. Returns 1 if ma
 
 ##### Properties
 
-Vector<Player> Players - vector of players representing all the players in the game 
+Vector<<n>Player> Players - vector of players representing all the players in the game
+
+int Phase - current phase of the game. 0 = day, 1 = night
+
+
+
+## View
+
+### Classes
+
+#### Client
+
