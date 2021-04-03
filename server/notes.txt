@@ -1,0 +1,26 @@
+Sever
+- what language do i write this in
+    - C - familiar, but messy
+    - Python - easy, but slow, python also doesn't like multiprocessing which will be necessary
+    - C# - done it before, OOP, but not portable to linux - not an option
+    - Java - not familiar, supposed to work like C#, but painful to build 
+    - C++ - not my most familiar, but works like c with objects
+
+    Conclusion - C++
+        - will improve my knowledge of the language
+        - is portable to windows and linux (and possibly even mac)
+        - can be built easily enough
+        - has class capabilities
+
+    Second conclusion - Java
+        - get to learn another language
+        - portable
+        - class features + interfacing and other OOP
+        - the build will be something to suffer through
+
+- Where do i want to run this?
+    - Raspberry Pi
+    - AWS instance
+    - Windows machine if bored
+    ==Linux capabilities remove C# as an option==
+
