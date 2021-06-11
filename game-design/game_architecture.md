@@ -62,7 +62,7 @@ Votes | int | Number of votes submitted in most recent trial
 Methods
 Name | Return Type | Parameters | Description
 ---|---|---|---
-AddPlayer | int | Player p | Add a player to the game
+AddPlayer | int | Player p | Add a player to the game, returns current number of players in the game
 StartGame | int | none | Begin the game
 ToString | string | none | Serialize the game state
 AddAccusation | int | int accuser_id, int victim_id | Add an accusation from the accuser to the victim
