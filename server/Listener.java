@@ -32,7 +32,7 @@ public class Listener{
         }
         catch (IOException e){
             System.err.println(String.format("Error accepting a client\n%s", e.getMessage()));
-            System.out.print("The server could not establish a connection with the client. Please restart");
+            System.out.println("The server could not establish a connection with the client. Please restart");
         }
 
         return null;

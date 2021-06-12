@@ -4,15 +4,15 @@ import game.*;
 import java.util.Scanner;
 
 
+
 public class MafiaServer {
-    static Game ServerGame;
-    static Scanner scan;
-    static Listener ServerListener;
-
     
-
+    
+    
     public static void main(String[] args) {
-
+        Game ServerGame;
+        Scanner scan;
+        Listener ServerListener;
         System.out.println("Welcome to the Mafia CLI Server. Let's get a game going.");
         scan = new Scanner(System.in);
         System.out.print("Enter a game name: ");
@@ -27,6 +27,7 @@ public class MafiaServer {
 
         ServerListener = new Listener(8086);
         
+        scan.close();
         while(true){
             Host h = ServerListener.Listen();
             h.ServerGame = ServerGame;

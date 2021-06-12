@@ -37,6 +37,9 @@ public class Game{
         return Players.size();
     }
 
+    public int GetNumPlayers(){
+        return Players.size();
+    }
 
     public void StartGame(){
         CurrentPhase = phase.DAY;
