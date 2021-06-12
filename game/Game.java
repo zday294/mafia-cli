@@ -48,5 +48,12 @@ public class Game{
         Accusations.put(accuser_id, victim_id);
     }
 
+    public String getName(){
+        return Name;
+    }
+
+    public boolean checkPassword(String pass){
+        return pass == Password;
+    }
     
 }
