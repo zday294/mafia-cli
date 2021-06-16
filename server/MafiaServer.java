@@ -8,9 +8,15 @@ import java.util.Scanner;
 public class MafiaServer {
 
     public static void main(String[] args) {
+        int port = 8086;
         Game ServerGame;
         Scanner scan;
         Listener ServerListener;
+
+        if (args.length > 1){
+            port = Integer.parseInt(args[0]);
+        }
+
         System.out.println("Welcome to the Mafia CLI Server. Let's get a game going.");
         scan = new Scanner(System.in);
         System.out.print("Enter a game name: ");
@@ -23,7 +29,7 @@ public class MafiaServer {
 
         System.out.println("Game successfully created. Waiting for players....");
 
-        ServerListener = new Listener(8086);
+        ServerListener = new Listener(port);
         
         scan.close();
         while(true){
@@ -31,6 +37,5 @@ public class MafiaServer {
             h.ServerGame = ServerGame;
             h.start();
         }
-
     }
 }

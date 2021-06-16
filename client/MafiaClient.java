@@ -14,18 +14,19 @@ public class MafiaClient {
         }
         String ip = args[0];
         int port = Integer.parseInt(args[1]);
-        
+
+        System.out.println("Searching for game...");        
         try{
             Socket socket = new Socket(ip, port);
             System.out.printf("Successfully connected to server %s\n", ip);
-            BufferedReader in = new BufferedReader(new InputStreamReader( socket.getInputStream()));
+            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             // OutputStream out = socket.getOutputStream();
 
             Thread t = new Thread(new Runnable() {
                 @Override
                 public void run(){
                 String messageFromServer = "";
-                while(messageFromServer != "end"){
+                while(messageFromServer != "game ended"){
                         try{
                             messageFromServer = in.readLine();
                             System.out.println(messageFromServer);
@@ -38,8 +39,6 @@ public class MafiaClient {
                 //here i need to handle when the message from the server is end
             });
             t.start();
-
-            
 
 
             t.join();

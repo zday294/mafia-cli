@@ -10,6 +10,7 @@ public class RequestMessage extends ProtocolMessage {
         present,
         gamestatus,
         playerStatus
+
     }
 
     ReqType reqType;

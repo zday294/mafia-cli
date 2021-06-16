@@ -2,15 +2,15 @@ package protocol;
 
 public class GameStatusMessage extends ProtocolMessage {
 
-    enum gameStatus{
+    enum GameStatus{
         unstarted,
         inprogress,
         ended
     }
 
-    gameStatus status;
+    GameStatus status;
 
-    public GameStatusMessage(gameStatus stat){
+    public GameStatusMessage(GameStatus stat){
         status = stat;
     }
 

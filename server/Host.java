@@ -3,6 +3,10 @@ package server;
 import java.io.*;
 import java.net.Socket;
 import game.*;
+import protocol.InvalidProtocolMessageException;
+import protocol.MessageBuilder;
+import protocol.PlainMessage;
+import protocol.ProtocolMessage;
 
 import java.util.concurrent.Executors;
 // import java.util.Timer;
@@ -44,22 +48,18 @@ public class Host extends Thread{
             }
         }, 2000, 200, TimeUnit.MILLISECONDS);
 
-
-        // WriteTimer.scheduleAtFixedRate(new TimerTask(){
-        //     @Override
-        //     public void run(){
-        //         WriteToClient();
-        //     }
-        // }, 2000, 200);
-
-
     }
 
 
     String HandleClient(String message){
-        String response = "";
-        
-        return response;
+        ProtocolMessage m;
+        try{
+            m = MessageBuilder.Build(message);
+        }
+        catch (InvalidProtocolMessageException ipme) {
+            m = new PlainMessage("\"Bad protocol message\"");
+        }
+        return m.toString();
     }   
 
 
