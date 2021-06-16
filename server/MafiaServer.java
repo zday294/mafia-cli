@@ -6,9 +6,7 @@ import java.util.Scanner;
 
 
 public class MafiaServer {
-    
-    
-    
+
     public static void main(String[] args) {
         Game ServerGame;
         Scanner scan;

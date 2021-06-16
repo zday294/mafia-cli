@@ -22,7 +22,6 @@ public class Game{
     Hashtable<Integer, Integer> Accusations;
 
 
-
     public Game(String name, String password){
         Name = name;
         Password = password;

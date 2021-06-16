@@ -1,7 +1,11 @@
 package game;
 
-public abstract class Townsfolk extends Player{
+public class Townsfolk extends Player{
     public Townsfolk(String name, int id){
         super(name, id);
+    }
+
+    public boolean Act(int player_id){
+        return true;
     }
 }

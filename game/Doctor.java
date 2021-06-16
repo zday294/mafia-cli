@@ -11,6 +11,7 @@ public class Doctor extends Townsfolk{
         return valid;
     }
 
+    @Override
     public boolean Act(int player_id){
         return Save(player_id);
     }

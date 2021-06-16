@@ -106,13 +106,13 @@ where action is the action the client took and validation is whether the action 
 If the server does not recieve an action from the client, the server will check for a client connection with the following string
 
 ```
-check <client_id>
+request present <client_id>
 ```
 
 The client should respond with
 
 ```
-here <server_name>
+present <server_name>
 ```
 
 If the server does not get a response, the server will close the client connection.
@@ -122,9 +122,8 @@ If the server does not get a response, the server will close the client connecti
 When the game is over, the server will send the following to the client
 
 ```
-game end
-winner <team>
-disconnect
+message "The winning team is the <team>"
+game ended
 ```
 
 ## Disconnecting early
