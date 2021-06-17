@@ -5,10 +5,10 @@ public class Mafia extends Player{
         super(name, id);
     }
 
-    public boolean Kill(int player_id){
+    boolean Kill(int player_id){
         boolean valid = false;
 
-        //determine if player_id is valid
+        //TODO: determine if player_id is valid
 
         return valid;
     }

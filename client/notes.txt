@@ -5,3 +5,5 @@ Most of the game will be handled by the server. The client exists mostly to conn
 Client side software architecture is available in the game-design/game_architecture file
 
 Future implementations may be designed in different languages
+
+UPDATE: we're switching to java and it's been going great

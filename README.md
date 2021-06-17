@@ -4,7 +4,7 @@ In the town of Definitely-Not-Salem, the people live peacably. Little do they kn
 
 However, the mafia has to look out. The town of Definitely-Not-Salem has an odd justice system. Due to the presence of the mafia, emergency trials are being held each day. By the grand power of democracy, someone may be put up as the defendant for murder. If convicted, he shall be executed immediately and without remorse. If all the mafia are sentenced to death, well then they're certainly not going to collect their dues.
 
-The townspeople are also not without defense. The doctor, having a keen intuition that someone might be murdered each night, can choose one of his fellow townsfolk to be saved. The sherrif, also keenly aware of malicious criminal undertaking, can investigate one person each night and determine if they are involved with this killing spree.
+The townspeople are not without defense. The doctor, having a keen intuition that someone might be murdered each night, can choose one of his fellow townsfolk to be saved. The sheriff, also keenly aware of malicious criminal undertaking, can investigate one person each night and determine if they are involved with this killing spree.
 
 Will you survive? Will you murder your fellow townsfolk? Will you follow the spirit of the law or obey its letter as an agent of chaos. The decision is up to you.
 

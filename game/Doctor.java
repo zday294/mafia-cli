@@ -5,9 +5,9 @@ public class Doctor extends Townsfolk{
         super(name, id);
     }
 
-    public boolean Save(int player_id){
+    boolean Save(int player_id){
         boolean valid = false;
-
+        //TODO: validate player_id
         return valid;
     }
 

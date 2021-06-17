@@ -3,14 +3,9 @@ package server;
 import java.io.*;
 import java.net.Socket;
 import game.*;
-import protocol.InvalidProtocolMessageException;
-import protocol.MessageBuilder;
-import protocol.PlainMessage;
-import protocol.ProtocolMessage;
+import protocol.*;
 
 import java.util.concurrent.Executors;
-// import java.util.Timer;
-// import java.util.TimerTask;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
@@ -26,6 +21,8 @@ public class Host extends Thread{
     String MessageBuffer;
     ScheduledExecutorService WriteService;
     Player ClientPlayer;
+
+    ProtocolMessage MostRecentMessage;
 
     
     public Host(Socket sock){
@@ -55,6 +52,13 @@ public class Host extends Thread{
         ProtocolMessage m;
         try{
             m = MessageBuilder.Build(message);
+            if (m.getTypeName() == "retry"){
+                m = MostRecentMessage;
+            }
+            else{
+                MostRecentMessage = m;
+            }
+
         }
         catch (InvalidProtocolMessageException ipme) {
             m = new PlainMessage("\"Bad protocol message\"");

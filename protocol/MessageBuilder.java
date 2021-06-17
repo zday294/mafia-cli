@@ -30,6 +30,9 @@ public class MessageBuilder {
             case "error":
                 pm = new ErrorMessage(messageTok[1]);
                 break;
+            case "retry":
+                pm = new RetryMessage();
+                break;
             default:
                 throw new InvalidProtocolMessageException();
         }

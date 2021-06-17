@@ -3,10 +3,19 @@ package client;
 import java.io.*;
 import java.net.Socket;
 
+import protocol.*;
+
 // import java.io.InputStreamReader;
 
 
 public class MafiaClient {
+
+    public static void HandleMessage(String message) throws InvalidProtocolMessageException{
+        ProtocolMessage pm = MessageBuilder.Build(message);
+
+        
+    }
+
     public static void main(String[] args){
         if (args.length < 2){
             System.out.println("Usage: MafiaClient <ip> <port>");
@@ -29,10 +38,14 @@ public class MafiaClient {
                 while(messageFromServer != "game ended"){
                         try{
                             messageFromServer = in.readLine();
-                            System.out.println(messageFromServer);
+                            HandleMessage(messageFromServer);
+                            // System.out.println(messageFromServer);
                         }
                         catch(IOException m){
                             System.err.println(m.getMessage());
+                        }
+                        catch(InvalidProtocolMessageException ipme){
+                            System.err.println(ipme.getMessage());
                         }
                     }
                 }
